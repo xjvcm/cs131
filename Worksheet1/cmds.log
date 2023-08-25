@@ -1,0 +1,50 @@
+    1  passwd
+    2  pwd
+    3  ls
+    4  ls -al
+    5  cd ..
+    6  ls
+    7  cd jonathanf23/
+    8  wget www.github.com
+    9  ls
+   10  mkdir Desktop
+   11  ls
+   12  cd Desktop/
+   13  mkdir myproject
+   14  cd myproject/
+   15  git init
+   16  touch jonathanf23.txt
+   17  ls
+   18  git status
+   19  git add
+   20  git add jonathanf23.txt 
+   21  git status
+   22  git commit -m "This is my first commit!"
+   23  git config --global user.email "jonvincruman@gmail.com"
+   24  git config --global user.name "Jonathan Manzano"
+   25  git commit -m "This is my first commit!"
+   26  git branch
+   27  git checkout -b my-new-branch
+   28  git branch
+   29  ls
+   30  pwd
+   31  git remote add origin https://github.com/xjvcm/newrepo.git
+   32  git branch -M main
+   33  ls
+   34  git branch
+   35  git branch -h
+   36  git push -u origin main
+   37  git branch
+   38  git push origin master 
+   39  git push origin main
+   40  ls
+   41  cd ..
+   42  ls
+   43  mkdir cs131
+   44  cd cs131/
+   45  git init
+   46  ls
+   47  mkdir Worksheet1
+   48  cd Worksheet1/
+   49  ls
+   50  history > cmds.log
