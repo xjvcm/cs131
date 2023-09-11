@@ -1,0 +1,290 @@
+    1  passwd
+    2  pwd
+    3  ls
+    4  ls -al
+    5  cd ..
+    6  ls
+    7  cd jonathanf23/
+    8  wget www.github.com
+    9  ls
+   10  mkdir Desktop
+   11  ls
+   12  cd Desktop/
+   13  mkdir myproject
+   14  cd myproject/
+   15  git init
+   16  touch jonathanf23.txt
+   17  ls
+   18  git status
+   19  git add
+   20  git add jonathanf23.txt 
+   21  git status
+   22  git commit -m "This is my first commit!"
+   23  git config --global user.email "jonvincruman@gmail.com"
+   24  git config --global user.name "Jonathan Manzano"
+   25  git commit -m "This is my first commit!"
+   26  git branch
+   27  git checkout -b my-new-branch
+   28  git branch
+   29  ls
+   30  pwd
+   31  git remote add origin https://github.com/xjvcm/newrepo.git
+   32  git branch -M main
+   33  ls
+   34  git branch
+   35  git branch -h
+   36  git push -u origin main
+   37  git branch
+   38  git push origin master 
+   39  git push origin main
+   40  ls
+   41  cd ..
+   42  ls
+   43  mkdir cs131
+   44  cd cs131/
+   45  git init
+   46  ls
+   47  mkdir Worksheet1
+   48  cd Worksheet1/
+   49  ls
+   50  history > cmds.log
+   51  ls
+   52  vi cmds.log 
+   53  cd ..
+   54  ls
+   55  git add .
+   56  git commit -m "This is my first commit!"
+   57  git remote add origin https://github.com/xjvcm/cs131.git
+   58  git branch -M main
+   59  git push -u origin main
+   60  exit
+   61  ls -h
+   62  ls --help
+   63  man ls
+   64  man find
+   65  man grep
+   66  man rm
+   67  man tr
+   68  man ls
+   69  exit
+   70  ping 8.8.8.8
+   71  systemctl enable --now cockpit.socket
+   72  insights-client --register
+   73  echo $$
+   74  echo $SHELL
+   75  ssh-keygen -t ed25519 -C "jonvincruman@gmail.com"
+   76  eval "$(ssh-agent -s)"
+   77  ssh-add ~/.ssh/id_ed25519
+   78  clip < ~/.ssh/id_ed25519.pub 
+   79  cat < ~/.ssh/id_ed25519.pub 
+   80  vi < ~/.ssh/id_ed25519.pub 
+   81  vi ~/.ssh/id_ed25519.pub 
+   82  ssh -T git@github.com
+   83  ls
+   84  ls ./.ssh/
+   85  touch ~/.ssh/config
+   86  vim
+   87  vim ~/.ssh/config 
+   88  ssh -T git@github.com
+   89  man chmod
+   90  chmod 600 ~/.ssh/config 
+   91  ssh -T git@github.com
+   92  echo "$SSH_AUTH_SOCK"
+   93  ls
+   94  cd Desktop/
+   95  ls
+   96  cd cs131/
+   97  ls
+   98  vim .git/config 
+   99  cd ~
+  100  ssh -V URL
+  101  exit
+  102  ssh-add -D
+  103  ssh-add -l
+  104  eval $(ssh-agent -s)"
+  105  eval "$(ssh-agent -s)"
+  106  ssh-add -l
+  107  ssh-add -L
+  108  ssh-add -D
+  109  ls
+  110  cd .ssh/
+  111  ls
+  112  ls -al
+  113  rmdir config
+  114  ls
+  115  rm -rf config 
+  116  ls
+  117  rm -rf id_ed25519
+  118  rm -rf id_ed25519.pub 
+  119  ls -al
+  120  exit
+  121  echo "$SSH_AUTH_SOCK"
+  122  ssh -T git@github.com
+  123  exit
+  124  ssh -T git@github.com
+  125  exit
+  126  ssh -T git@github.com
+  127  exit
+  128  ssh -T git@github.com
+  129  exit
+  130  ssh -T git@github.com
+  131  ls
+  132  cd Desktop/
+  133  ls
+  134  cd cs131/
+  135  ls
+  136  git branch
+  137  git push --set-upstream origin main
+  138  cd ..
+  139  cd ~
+  140  ls
+  141  ls -alt
+  142  ls -a
+  143  ls -al
+  144  vim .gitconfig 
+  145  echo $SHELL
+  146  chsh -l
+  147  man less
+  148  ls
+  149  cd Desktop/cs131/
+  150  ls
+  151  cs Worksheet1/
+  152  ls
+  153  cd Worksheet1/
+  154  ls
+  155  cat cmds.log 
+  156  head cmds.log 
+  157  head -15 cmds.log 
+  158  tail cmds.log 
+  159  ssh-keygen -t ed25519 -C "jonvincruman@gmail.com"
+  160  eval "$(ssh-agent -s)"
+  161  ls ~/.ssh/
+  162  ssh-add ~/.ssh/id_ed25519
+  163  cat ~/.ssh/id_ed25519.pub 
+  164  ls
+  165  cd Desktop/
+  166  ls
+  167  mv cs131/ ~
+  168  ls
+  169  cd ..
+  170  ls
+  171  cd desk
+  172  cd Desktop/
+  173  ls
+  174  ls myproject/
+  175  cat myproject/jonathanf23.txt 
+  176  cd myproject/
+  177  vim jonathanf23.txt 
+  178  cd ..
+  179  ls
+  180  cd ..
+  181  ls
+  182  rm -rf Desktop/
+  183  ls
+  184  cat index.html 
+  185  clear
+  186  ls
+  187  rm -rf index.html 
+  188  ls
+  189  mkdir wkst_2
+  190  ls
+  191  cd wkst_2/
+  192  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  193  exit
+  194  ls
+  195  cd wkst_2/
+  196  ls
+  197  cat Global\ YouTube\ Statistics.csv 
+  198  clear
+  199  man grep
+  200  grep "United States" Global\ YouTube\ Statistics.csv 
+  201  grep "Music" Global\ YouTube\ Statistics.csv 
+  202  man wc
+  203  grep -w "Music" Global\ YouTube\ Statistics.csv 
+  204  grep "Music" Global\ YouTube\ Statistics.csv 
+  205  grep "Music" Global\ YouTube\ Statistics.csv > music.txt
+  206  ls
+  207  wc -l music.txt 
+  208  wc -w music.txt 
+  209  grep Global\ YouTube\ Statistics.csv 
+  210  cat Global\ YouTube\ Statistics.csv 
+  211  grep "Music" Global\ YouTube\ Statistics.csv 
+  212  clear
+  213  cat Global\ YouTube\ Statistics.csv 
+  214  grep [0-9]",Music" Global\ YouTube\ Statistics.csv 
+  215  vim music.txt 
+  216  grep [0-9]",Music" Global\ YouTube\ Statistics.csv >> music.txt 
+  217  wc -l
+  218  wc -l music.txt 
+  219  wc -w music.txt 
+  220  cat music.txt 
+  221  grep "Music" Global\ YouTube\ Statistics.csv > music2.txt
+  222  wc -l music2.txt 
+  223  wc -c music2.txt 
+  224  clear
+  225  cat Global\ YouTube\ Statistics.csv 
+  226  grep [0-9]",Music" Global\ YouTube\ Statistics.csv | wc -l
+  227  grep [0-9]",Music" Global\ YouTube\ Statistics.csv | wc -c
+  228  man wc
+  229  grep [0-9]",Music" Global\ YouTube\ Statistics.csv | wc -w
+  230  vim
+  231  vimtutor
+  232  exit
+  233  ls
+  234  cd wkst_2/
+  235  ls
+  236  man grep
+  237  grep '[0-9],Music' Global\ YouTube\ Statistics.csv | wc -wl
+  238  grep "[0-9],Music" Global\ YouTube\ Statistics.csv | wc -wl
+  239  ls
+  240  rm Global\ YouTube\ Statistics.csv 
+  241  ls
+  242  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  243  ls
+  244  cat Global\ YouTube\ Statistics.csv 
+  245  grep "[0-9],Music"
+  246  grep "[0-9],Music" Global\ YouTube\ Statistics.csv 
+  247  grep -h "[0-9],Music" Global\ YouTube\ Statistics.csv 
+  248  grep -c "[0-9],Music" Global\ YouTube\ Statistics.csv 
+  249  grep -c "[0-9],Music" Global\ YouTube\ Statistics.csv | wc -l
+  250  grep -c "[0-9],Music" Global\ YouTube\ Statistics.csv > linecount.txt && wc -l linecount.txt
+  251  cat linecount.txt 
+  252  grep "[0-9],Music" Global\ YouTube\ Statistics.csv > linecount.txt && wc -l linecount.txt
+  253  cat Global\ YouTube\ Statistics.csv 
+  254  cat linecount.txt 
+  255  grep -n "[0-9],Music" Global\ YouTube\ Statistics.csv > linecount.txt && wc -l linecount.txt
+  256  grep -n '[0-9],Music' Global\ YouTube\ Statistics.csv 
+  257  grep -c '[0-9],Music' Global\ YouTube\ Statistics.csv 
+  258  grep -c "[0-9],Music" Global\ YouTube\ Statistics.csv 
+  259  grep -c "Music" Global\ YouTube\ Statistics.csv 
+  260  grep -n "Music" Global\ YouTube\ Statistics.csv 
+  261  grep -c "Music" Global\ YouTube\ Statistics.csv 
+  262  grep -c "[0-9],Music" Global\ YouTube\ Statistics.csv 
+  263  grep -c "[0-9],Music" Global\ YouTube\ Statistics.csv > linecount.txt 
+  264  wc -l linecount.txt 
+  265  grep "[0-9],Music" Global\ YouTube\ Statistics.csv > linecount.txt 
+  266  wc -l linecount.txt 
+  267  cat linecount.txt 
+  268  vim linecount.txt 
+  269  grep -c "[0-9],Music" Global\ YouTube\ Statistics.csv
+  270  grep -c "\d,Music" Global\ YouTube\ Statistics.csv
+  271  grep "[0-9],Music" Global\ YouTube\ Statistics.csv
+  272  man awk
+  273  ls
+  274  cd wkst_2/
+  275  ls
+  276  grep -c "[0-9],Music" Global\ YouTube\ Statistics.csv 
+  277  grep -c "[0-9],Music" Global\ YouTube\ Statistics.csv > counts.txt
+  278  grep"[0-9],Music" Global\ YouTube\ Statistics.csv > linecount.txt 
+  279  grep "[0-9],Music" Global\ YouTube\ Statistics.csv > linecount.txt 
+  280  vi linecount.txt 
+  281  wc - linecount.txt
+  282  wc -c linecount.txt
+  283  wc -w linecount.txt
+  284  wc -w linecount.txt >> counts.txt 
+  285  vi counts.txt 
+  286  ls ~/cs131/
+  287  mkdir ~/cs131/Worksheet2
+  288  mv counts.txt ~/cs131/Worksheet2/
+  289  ls
+  290  history > cmds.log
