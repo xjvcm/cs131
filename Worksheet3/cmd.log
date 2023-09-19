@@ -1,0 +1,62 @@
+  406  cd wkst_3
+  407  ls
+  408  mkdir education
+  409  ls
+  410  cd education/
+  411  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  412  ls
+  413  grep -i 'Education' > greped_education.txt
+  414  grep -i 'Education' Global\ YouTube\ Statistics.csv > greped_education.txt
+  415  sort -k 2 -t ',' -n -r
+  416  sort -k 2 -t ',' -n -r greped_education.txt 
+  417  sort -k 2 -t ',' -n -r greped_education.txt | head -n 1
+  418  sort -k 3 -t ',' -n -r greped_education.txt | head -n 1
+  419  sort -k3 -t',' -n -r greped_education.txt | head -n 1
+  420  sort -k3 -t',' -n -r greped_education.txt
+  421  exit
+  422  ls
+  423  cd wkst_3
+  424  ls
+  425  cd education/
+  426  ls
+  427  rm -rf greped_education.txt 
+  428  ls
+  429  grep -i 'Education' Global\ YouTube\ Statistics.csv 
+  430  grep -i 'Education' Global\ YouTube\ Statistics.csv > youtube_education.txt
+  431  sort -k 3 -t ',' -n -r youtube_education.txt 
+  432  ls -a
+  433  rm -rf Global\ YouTube\ Statistics.csv 
+  434  ls
+  435  rm -rf youtube_education.txt 
+  436  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  437  ls
+  438  grep -i 'Education'
+  439  grep -i 'Education' Global\ YouTube\ Statistics.csv 
+  440  grep -i 'Education' Global\ YouTube\ Statistics.csv > youtube_education.txt
+  441  sort -t ',' -k 3 -n -r youtube_education.txt 
+  442  sort -t "," -k 3 -n -r youtube_education.txt 
+  443  sort -t "," -k 3 -n youtube_education.txt 
+  444  sort -t "," -k 3.5 -n youtube_education.txt 
+  445  sort -t "," -k 3.5 -n -r youtube_education.txt 
+  446  sort -t "," -k 2 -n -r youtube_education.txt 
+  447  sort -t "," -k 2.5 -n -r youtube_education.txt 
+  448  sort -t "," -k 3 -n -r youtube_education.txt 
+  449  grep -i "[0-9],Education" Global\ YouTube\ Statistics.csv | sort -t ',' -k 3 -n -r
+  450  grep -i "[0-9],Education" Global\ YouTube\ Statistics.csv | sort -t ',' -k 3 -n
+  451  grep -i "[0-9],Education" Global\ YouTube\ Statistics.csv | sort -t ',' -k 3 -n | head -n 1
+  452  vi Global\ YouTube\ Statistics.csv 
+  453  ls
+  454  vi youtube_education.txt 
+  455  grep -i "[0-9,Education" Global\ YouTube\ Statistics.csv > youtube_education.txt
+  456  grep -i "[0-9],Education" Global\ YouTube\ Statistics.csv > youtube_education.txt
+  457  vi youtube_education.txt 
+  458  sort -t "," -k 3 -n youtube_education.txt 
+  459  vim youtube_education.txt 
+  460  sort -t ',' -k 3 -n -r youtube_education.txt 
+  461  sort -t ',' -k 3 -n -r youtube_education.txt | head -n 1
+  462  sort -t ',' -k 3 -n -r youtube_education.txt | head -n 1 >> ../ws3.txt
+  463  cd ..
+  464  ls
+  465  vim ws3.txt
+  466  ls
+  467  history > cmd.log
