@@ -1,0 +1,124 @@
+## 1) Make Assignment1 Directory and Change Working Directory to Assignment1
+# Command:
+mkdir Assignment1
+cd Assignment1
+
+## 2) Echo Shell
+# Command:
+echo $SHELL
+
+# Output:
+/bin/bash
+
+## 3) Echo Home Directory Path
+# Command:
+bash-4.4$ echo $HOME
+
+# Output:
+/mnt/scratch/FA23_CS131_Ashish/jonathanf23
+
+## 4) UID and Groups I Belong to:
+# Command:
+bash-4.4$ id -u jonathanf23
+
+# Output:
+1126
+
+# Command:
+groups
+
+# Output:
+jonathanf23 S77
+
+5) Create Directory "myDir" and Remove "write" Permission for Myself:
+# Command:
+mkdir myDir
+chmod u-w myDir/
+ls -l
+
+# Output:
+dr-xrwxr-x 2 jonathanf23 jonathanf23 4096 Sep 22 19:55 myDir
+
+## Can I "cd" into "myDir"? Yes
+# Command:
+cd myDir/
+pwd
+
+# Output:
+/mnt/scratch/FA23_CS131_Ashish/jonathanf23/testDirectory/Assignment1/myDir
+
+
+## Can I "ls myDir/"? Yes
+# Command:
+ls myDir/
+
+## Can I "ls -l myDir/" Yes
+# Command:
+ls -l
+
+# Output:
+total 0
+
+## Can I Create Files Under it? No
+# Command:
+touch test.txt
+
+# Output:
+touch: cannot touch 'test.txt': Permission denied
+
+## 6) Create directories "myDir2" and "myDir3" 
+# Command:
+pwd
+
+# Output:
+/mnt/scratch/FA23_CS131_Ashish/jonathanf23/testDirectory/Assignment1
+
+# Command:
+mkdir myDir2
+mkdir myDir3
+
+## 7) Create file "myFile.txt" inside "myDir2" and move it from "myDir2" to
+"myDir3"
+# Command:
+cd myDir2
+touch myFile.txt
+mv myFile.txt ../myDir3
+
+## 8) Find total amount of RAM/Memory with 'free' in mebibytes
+# Command:
+free -m
+
+# Output:
+              total        used        free      shared  buff/cache   available
+Mem:          71367       12255        1475        1252       57636       55697
+Swap:          4119        1052        3067
+
+## 9) Identify the operating system version. It is under /etc/os-release
+# Command:
+bash-4.4$ cat /etc/os-release
+
+# Output:
+NAME="Red Hat Enterprise Linux"
+VERSION="8.6 (Ootpa)"
+ID="rhel"
+ID_LIKE="fedora"
+VERSION_ID="8.6"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="Red Hat Enterprise Linux 8.6 (Ootpa)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:8::baseos"
+HOME_URL="https://www.redhat.com/"
+DOCUMENTATION_URL="https://access.redhat.com/documentation/red_hat_enterprise_linux/8/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 8"
+REDHAT_BUGZILLA_PRODUCT_VERSION=8.6
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="8.6
+
+## 10) What is the permission for the file containing the OS version?
+# Command:
+ls -l /etc/os-release
+
+# Output: 
+lrwxrwxrwx. 1 root root 22 Apr  6  2022 /etc/os-release -> ..//usr/lib/os-release
