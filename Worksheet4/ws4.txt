@@ -1,0 +1,32 @@
+## Task 1:
+$ cp /etc/bashrc ~/.bashrc
+$ vim .bashrc
+$ l
+total 136
+drwxrwxr-x 7 jonathanf23 jonathanf23     4096 Sep 22 23:53  cs131
+drwxrwxr-x 3 jonathanf23 jonathanf23     4096 Oct  4 15:12  Worksheet4
+-rw-rw-r-- 1 jonathanf23 jonathanf23    81386 Oct  4 15:13  ws4_contd.txt
+-rw-rw-r-- 1 jonathanf23 jonathanf23 13668352 Oct  4 15:36  ws4.txt
+$ w
+      6      47     350
+
+## Task 2:
+$ mkdir Worksheet4
+$ cd Worksheet4/
+$ mkdir Subscribers
+$ wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+$ grep ',US,' Global\ YouTube\ Statistics.csv | awk -F "\"*,\"*" '{print $3}' > ./Subscribers/United_States.txt
+$ grep ',IN,' Global\ YouTube\ Statistics.csv | awk -F "\"*,\"*" '{print $3}' > ./Subscribers/India.txt
+$ sum=$(awk '{s+=$1} END {print s}' ./Subscribers/United_States.txt)
+$ count=$(wc -l < ./Subscribers/United_States.txt)
+$ echo "$sum / $count" | bc
+23089735
+$ echo "$sum / $count" | bc > ws4_means.txt
+$ sum=$(awk '{s+=$1} END {print s}' ./Subscribers/India.txt)
+$ count=$(wc -l < ./Subscribers/India.txt)
+$ echo "$sum / $count" | bc
+25658333
+$ echo "$sum / $count" | bc > ws4_means.txt
+$ cat ws4_means.txt
+23089735
+25658333
