@@ -1,0 +1,30 @@
+### Commands used for Assignment Two
+
+## 1:
+find /etc -type f > one.txt 2> two.txt
+
+# 1b:
+cat one.txt
+cat two.txt
+
+## 2
+cut -d ',' -f 20,21 Global\ YouTube\ Statistics.csv | sort |uniq -c | sort -nr | head -n 3
+
+## 3
+ps -u $USER
+
+## 4
+# 4a
+vi file.txt
+
+# 4b
+ps -u $USER
+
+# 4d
+ps -u $USER
+
+## 5
+ps -p 1 -o comm,pid
+
+## 6
+ps aux
