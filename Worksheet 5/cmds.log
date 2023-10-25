@@ -1,0 +1,20 @@
+# Make directory named 'Worksheet 5'
+mkdir Worksheet\ 5
+
+# Change current directory to Worksheet 5
+cd Worksheet\ 5
+
+# Download the YouTube dataset
+wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+
+# Create a shell script file
+touch script.sh
+
+# Edit the shell script file
+vim script.sh
+
+# Print script contents
+cat script.sh
+
+# Run the script
+bash script.sh Global\ YouTube\ Statistics.csv

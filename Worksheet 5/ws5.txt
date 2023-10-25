@@ -1,0 +1,4 @@
+22 entries in Comedy.txt
+65 entries in Entertainment.txt
+26 entries in Gaming.txt
+72 entries in Music.txt
