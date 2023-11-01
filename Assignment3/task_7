@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Performs Task 7 of Assignment 3
+################################################################################
+# Display all the distinct lines left in passwd.fake after deleting all letter 
+#   and digits and spaces.
+# Globals:
+#   None
+# Argument:
+#   The file named 'passwd.fake'
+################################################################################
+task_7() {
+  sed 's/[a-zA-Z0-9 ]//g' "$1" \
+    | sort -u
+}
+
+task_7 "$1"

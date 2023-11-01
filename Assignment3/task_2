@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# Performs Task 2 of Assignment 3
+################################################################################
+# Display user(s) logged in on Sunday
+# Globals:
+#   None
+# Argument:
+#   The file named 'lastf23.fake'
+################################################################################
+task_2() {
+  echo 'The list of people who worked on Sunday are:'
+
+  while IFS=$'\n' read user; do
+    
+    echo "${user}"
+  
+  done < <(grep -i 'Sun' "$1" \
+    | awk '{ print $1 }' \
+    | sort \
+    | uniq)
+
+  echo 'Kudos to these people for putting in the work'  
+}
+
+task_2 "$1"

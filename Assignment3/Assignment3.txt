@@ -1,0 +1,313 @@
+################################################################################
+#			Assignment3.txt
+#			Assignment 3's answers/outputs to task questions.
+#	AUTHOR		Jonathan Manzano
+#	PROFESSOR	Ashish Khanchandani
+#	COURSE		CS 131
+#	SECTION		02
+#	DATE		02 November 2023
+################################################################################
+
+# Task 1:
+# Give commands and Output of :
+# 1. The number of lines in last.fake before filtering
+# 2. The command you used to make the file such that only lines that have "f23" are in the "lastf23.fake" file. (Similar to how you extracted US data from YoutubeDataset)
+# 3. The number of lines in lastf23.fake after you filtered everything that does not have "f23"
+
+# 1:
+
+# Command:
+$ wc -l < last.fake
+
+# Output:
+$ 2162
+
+# 2:
+
+# Command:
+$ grep -i 'f23'< last.fake > lastf23.fake
+
+# 3:
+
+# Command:
+$ wc -l < lastf23.fake
+
+# Output:
+$ 239
+
+--------------------------------------------------------------------------------
+
+# Task 2:
+
+# Command:
+$ cat task_2
+
+# Output:
+#!/bin/bash
+#
+# Performs Task 2 of Assignment 3
+################################################################################
+# Display user logged in on Sunday
+# Globals:
+#   None
+# Argument:
+#   The file named 'lastf23.fake'
+################################################################################
+task_2() {
+  echo 'The list of people who worked on Sunday are:'
+  
+  while IFS=$'\n' read user; do
+    
+    echo "${user}"
+  
+  done < <(grep -i 'Sun' "$1" \
+    | awk '{ print $1 }' \
+    | sort \
+    | uniq)
+  
+  echo 'Kudos to these people for putting in the work'
+}
+
+task_2 "$1
+
+# Command:
+$ ./task_2 lastf23.fake
+
+# Output:
+The list of people who worked on Sunday are:
+jewonf23
+saniaf23
+tienf23
+Kudos to these people for putting in the work
+
+--------------------------------------------------------------------------------
+
+# Task 3:
+
+# Command:
+$ cat task_3
+
+# Output:
+#!/bin/bash
+#
+# Performs Task 3 of Assignment 3
+################################################################################
+# Display user(s) logged in between the hours 11:00 PM - 4:00 AM (23:00 - 04:00)
+#   inclusively
+# Globals:
+#   None
+# Argument:
+#   The file named 'lastf23.fake'
+################################################################################
+task_3() {
+  echo 'Night Owl(s) List:'
+  
+  while IFS=$'\n' read user; do
+    
+    echo "${user}"
+  
+  done < <(awk '\
+    ((($7 >= "23:00" && $7 <= "23:59") \
+    || ($7 >= "00:00" && $7 <= "04:00")) \
+    && (($9 >= "23:00" && $9 <= "23:59") \
+    || ($9 >= "00:00" && $9 <= "04:00"))) {print $1}\
+    ' \
+    "$1" \
+    | sort \
+    | uniq)
+  
+  echo 'Night Owls are dope. Please ensure you get enough sleep though.'
+}
+
+task_3 "$1"
+
+# Command:
+$ ./task_3 lastf23.fake
+
+# Output:
+Night Owl(s) List:
+aaronf23
+anasf23
+divijf23
+hamzaf23
+hof23
+jamesf23
+junf23
+kobef23
+maximf23
+saniaf23
+thif23
+tienf23
+Night Owls are dope. Please ensure you get enough sleep though.
+
+--------------------------------------------------------------------------------
+
+# Task 4:
+
+# Command:
+$ cat task_4
+
+# Output:
+#!/bin/bash
+#
+# Performs Task 4 of Assignment 3
+################################################################################
+# Display user(s) logged in between the hours 5:00 AM - 9:00 AM (05:00 - 09:00)
+#   inclusively
+# Globals:
+#   None
+# Argument:
+#   The file named 'lastf23.fake'
+################################################################################
+task_4() {
+  echo 'Early Bird(s) List:'
+  
+  while IFS=$'\n' read user; do
+  
+    echo "${user}"
+  
+  done < <(awk '\
+    (($7 >= "05:00" && $7 <= "09:00") \
+    && ($9 >= "05:00" && $9 <= "09:00")) { print $1 }\
+    ' \
+    "$1" \
+    | sort \
+    | uniq)
+  
+  echo 'Early Birds are dope. Please ensure you get enough sleep though.'
+}
+
+task_4 "$1"
+
+# Command:
+$ ./task_4 lastf23.fake
+
+# Output:
+
+Early Bird(s) List:
+hamzaf23
+hof23
+thif23
+tienf23
+Early Birds are dope. Please ensure you get enough sleep though.
+
+--------------------------------------------------------------------------------
+
+# Task 5:
+
+# Command:
+$ cat task_5
+
+# Output:
+#!/bin/bash
+#
+# Performs Task 5 of Assignment 3
+################################################################################
+# Display user(s) whose user name starts with 't'
+#   inclusively
+# Globals:
+#   None
+# Argument:
+#   The file named 'lastf23.fake'
+################################################################################
+task_5() {
+  while IFS=$'\n' read user; do
+    
+    echo "${user}"
+  
+  done < <(awk '\
+    $1 ~ /^t.*f23$/ { print $ 1}\
+    ' \
+    "$1" \
+    | sort \
+    | uniq)
+}
+
+task_5 "$1"
+
+# Command:
+$ ./task_5 lastf23.fake
+
+# Output:
+thif23
+tienf23
+
+--------------------------------------------------------------------------------
+
+# Task 6
+
+# Command:
+$ cat task_6
+
+# Output:
+
+#!/bin/bash
+#
+# Performs Task 6 of Assignment 3
+################################################################################
+# Display user(s) whose user name starts with 'a' and UID is divisible by 2
+# Globals:
+#   None
+# Argument:
+#   The file named 'passwd.fake'
+################################################################################
+task_6() {
+  awk '\
+    BEGIN { FS = ":" }\
+    ($1 ~ /^a.*$/) && ($3 % 2 == 0) {print $1}\
+    '\
+    "$1"
+}
+
+task_6 "$1"
+
+# Command:
+$ ./task_6 passwd.fake
+
+# Output:
+angie23fa
+areebah23fa
+apple23fa
+ajay23fa
+alan23fa
+amreenf23
+
+--------------------------------------------------------------------------------
+
+# Task 7:
+
+# Command:
+$ cat task_7
+
+# Output:
+#!/bin/bash
+#
+# Performs Task 7 of Assignment 3
+################################################################################
+# Display all the distinct lines left in passwd.fake after deleting all letter 
+#   and digits and spaces.
+# Globals:
+#   None
+# Argument:
+#   The file named 'passwd.fake'
+################################################################################
+task_7() {
+  sed 's/[a-zA-Z0-9 ]//g' "$1" \
+    | sort -u
+}
+
+task_7 "$1"
+
+# Command:
+$ ./task_7 passwd.fake
+
+# Output:
+-::::-:/://
+-:::::///-://
+-:::::/://
+::::-:///://
+:::::///://
+:::::///_/://
+:::::///__/://
+::::://://
+:::::/://

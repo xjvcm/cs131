@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Performs Task 6 of Assignment 3
+################################################################################
+# Display user(s) whose user name starts with 'a' and UID is divisible by 2
+# Globals:
+#   None
+# Argument:
+#   The file named 'passwd.fake'
+################################################################################
+task_6() {
+  awk '\
+    BEGIN { FS = ":" }\
+    ($1 ~ /^a.*$/) && ($3 % 2 == 0) { print $1 }\
+    '\
+    "$1"
+}
+
+task_6 "$1"

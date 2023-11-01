@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# Performs Task 5 of Assignment 3
+################################################################################
+# Display user(s) whose user name starts with 't'
+#   inclusively
+# Globals:
+#   None
+# Argument:
+#   The file named 'lastf23.fake'
+################################################################################
+task_5() {
+  while IFS=$'\n' read user; do
+    
+    echo "${user}"
+  
+  done < <(awk '\
+    $1 ~ /^t.*f23$/ { print $ 1}\
+    ' \
+    "$1" \
+    | sort \
+    | uniq)
+}
+
+task_5 "$1"

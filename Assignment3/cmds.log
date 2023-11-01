@@ -1,0 +1,56 @@
+################################################################################
+#                       cmds
+#                       Assignment 3's commands to task questions.
+#       AUTHOR          Jonathan Manzano
+#       PROFESSOR       Ashish Khanchandani
+#       COURSE          CS 131
+#       SECTION         02
+#       DATE            02 November 2023
+################################################################################
+
+# Task 1:
+$ wc -l last.fake
+$ grep -i 'f23' last.fake > lastf23.fake
+$ wc -l < lastf23.fake
+
+# Task 2:
+$ touch task_2
+$ chmod +x task_2
+$ vim task_2
+$ cat task_2
+$ ./task_2 lastf23.fake
+
+# Task 3:
+$ touch task_3
+$ chmod +x task_3
+$ vim task_3
+$ cat task_3
+$ ./task_3 lastf23.fake
+
+# Task 4:
+$ touch task_4
+$ chmod +x task_4
+$ vim task_4
+$ cat task_4
+$ ./task_4 lastf23.fake
+
+# Task 5:
+$ touch task_5
+$ chmod +x task_5
+$ vim task_5
+$ cat task_5
+$ ./task_5 lastf23.fake
+
+# Task 6:
+$ touch task_6
+$ chmod +x task_6
+$ vim task_6
+$ cat task_6
+$ ./task_6 passwd.fake
+
+# Task 7:
+$ touch task_7
+$ chmod +x task_7
+$ vim task_7
+$ cat task_7
+$ ./task_7 passwd.fake

@@ -1,0 +1,30 @@
+#!/bin/bash
+#
+# Performs Task 4 of Assignment 3
+################################################################################
+# Display user(s) logged in between the hours 5:00 AM - 9:00 AM (05:00 - 09:00)
+#   inclusively
+# Globals:
+#   None
+# Argument:
+#   The file named 'lastf23.fake'
+################################################################################
+task_4() {
+  echo 'Early Bird(s) List:'
+  
+  while IFS=$'\n' read user; do
+  
+    echo "${user}"
+  
+  done < <(awk '\
+    (($7 >= "05:00" && $7 <= "09:00") \
+    && ($9 >= "05:00" && $9 <= "09:00")) { print $1 }\
+    ' \
+    "$1" \
+    | sort \
+    | uniq)
+  
+  echo 'Early Birds are dope. Please ensure you get enough sleep though.'
+}
+
+task_4 "$1"
