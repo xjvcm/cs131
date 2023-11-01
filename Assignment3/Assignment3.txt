@@ -11,8 +11,11 @@
 # Task 1:
 # Give commands and Output of :
 # 1. The number of lines in last.fake before filtering
-# 2. The command you used to make the file such that only lines that have "f23" are in the "lastf23.fake" file. (Similar to how you extracted US data from YoutubeDataset)
-# 3. The number of lines in lastf23.fake after you filtered everything that does not have "f23"
+# 2. The command you used to make the file such that only lines that have "f23" 
+       are in the "lastf23.fake" file. (Similar to how you extracted US data
+       from YoutubeDataset)
+# 3. The number of lines in lastf23.fake after you filtered everything that does
+        not have "f23"
 
 # 1:
 
