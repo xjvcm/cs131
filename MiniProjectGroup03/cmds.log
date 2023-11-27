@@ -21,8 +21,8 @@ $ cut -d, -f7 AMZN_data_1999_2022.csv | sort -nr | head -1
 # 7. Minimum Volume
 $ cut -d, -f7 AMZN_data_1999_2022.csv | sort -n | head -2
 
-# 8. Minimum High Price
-$ cut -d, -f3 AMZN_data_1999_2022.csv | sort -n | head -2
+# 8. Minimum Low Price
+$ cut -d, -f4 AMZN_data_1999_2022.csv | sort -n | head -2
 
 # 9. Maximum High Price
 $ cut -d, -f3 AMZN_data_1999_2022.csv | sort -nr | head -1
