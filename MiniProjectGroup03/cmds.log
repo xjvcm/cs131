@@ -1,0 +1,28 @@
+# Capstone Project Commands
+
+# 1. File Type
+$ file AMZN_data_1999_2022.csv
+
+# 2. MIME File Type
+$ file -i AMZN_data_1999_2022.csv
+
+# 3. Numbers of Lines
+$ wc -l AMZN_data_1999_2022.csv
+
+# 4. Column Names
+$ head -1 AMZN_data_1999_2022.csv
+
+# 5. Count Non-Null Entries
+$ awk -F, '{if (NF == 7) print}' AMZN_data_1999_2022.csv | wc -l
+
+# 6. Maximum Volume
+$ cut -d, -f7 AMZN_data_1999_2022.csv | sort -nr | head -1
+
+# 7. Minimum Volume
+$ cut -d, -f7 AMZN_data_1999_2022.csv | sort -n | head -2
+
+# 8. Minimum High Price
+$ cut -d, -f3 AMZN_data_1999_2022.csv | sort -n | head -2
+
+# 9. Maximum High Price
+$ cut -d, -f3 AMZN_data_1999_2022.csv | sort -nr | head -1
